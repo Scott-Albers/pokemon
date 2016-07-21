@@ -1,8 +1,8 @@
 applications:
 - disk_quota: 1024M
   command: npm start
-  host: scott_bal_deploy
-  name: scott_bal_deploy
+  host: PokemonVa
+  name: PokemonVa
   path: .
   domain: app1.cftest.allstate.com
   instances: 1

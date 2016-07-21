@@ -1,6 +1,6 @@
 import App from './components/App';
 import Home from './components/Home';
-import About from './components/About';
+import Pokemon from './components/Pokemon';
 import Faq from './components/Faq';
 
 import React from 'react';
@@ -14,7 +14,7 @@ render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
-      <Route path="about" component={About} />
+      <Route path="pokemon" component={Pokemon} />
       <Route path="faq" component={Faq} />
     </Route>
   </Router>
