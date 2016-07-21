@@ -36,14 +36,14 @@ export default class Pokemon extends React.Component {
       this.setState({ pokemons: rsp.data.pokemons });
     })
     .catch(err => {
-      this.setState({ errors: JSON.parse(err.response.data).messages });
+      this.setState({ errors: err });
     });
   }
 
   render() {
     return (
       <div>
-
+        <div>pokemon token{localStorage.getItem('token')}</div>
         <div className="row">
           <div className="col-xs-3">
             <form>
@@ -60,7 +60,7 @@ export default class Pokemon extends React.Component {
           </div>
           <div className="col-xs-3">
             <ul className="bg-danger">
-              {this.state.errors.map((e, i) => <li key={i}>{e}</li>)}
+              {this.state.errors}
             </ul>
           </div>
           <div className="col-xs-6">

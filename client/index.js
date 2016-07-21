@@ -1,7 +1,8 @@
 import App from './components/App';
 import Home from './components/Home';
 import Pokemon from './components/Pokemon';
-import Faq from './components/Faq';
+import Register from './components/Register';
+import Login from './components/Login';
 
 import React from 'react';
 import { render } from 'react-dom';
@@ -14,8 +15,9 @@ render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
+      <Route path="register" component={Register} />
       <Route path="pokemon" component={Pokemon} />
-      <Route path="faq" component={Faq} />
+      <Route path="login" component={Login} />
     </Route>
   </Router>
   , document.getElementById('root'));

@@ -32,6 +32,7 @@ watch: all
 
 fast-tests-watch: fast-tests
 	@echo [fast-tests-watch]
+	@echo %date
 	@$(BIN)/chokidar 'client/**/*.js' 'server/**/*.js' 'test/**/*.js' -c 'make fast-tests'
 
 fast-tests: main ready compile-back tests
